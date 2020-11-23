@@ -3,11 +3,35 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+/**
+The interface (console) of administrators after login. 
+<p>
+Admin users may choose actions to perform. 
+<p>
+This class calls methods in respective controller classes. 
+@author Group3_SS6_CZ2002
+@version 1.0
+@since 2020-11-22
+*/
 public class AdminBoundary {
+    /**
+	 * The controller class object for AdminCourseController
+	 */
     private AdminCourseController acc;
+    /**
+	 * The controller class object for AdminStudentController
+	 */
     private AdminStudentController asc;
+    /**
+	 * The scanner object to accept user input. 
+	 */
     private Scanner sc;
 
+    /**
+     * Constructor of the AdminBoundaryClass. The two controller class objects should be passed in while the scanner object is created inside the constructor. 
+     * @param acc the AdminCourseController object
+     * @param asc the AdminStudentController object
+     */
     public AdminBoundary(AdminCourseController acc, AdminStudentController asc){
         this.acc = acc;
         this.asc = asc;
@@ -15,6 +39,10 @@ public class AdminBoundary {
     }
 
 
+    /**
+	 * Print the menu of actions. Then the function listens for the user's input that represents the action they wish to perform. 
+	 * After the user enters a choice, the function calls respective method.   
+	 */
     public void printMenu(){
         System.out.println("-------------------\n    Admin Menu     \n-------------------");
         System.out.println("1. Edit student access period");
@@ -53,6 +81,11 @@ public class AdminBoundary {
         }
     }
 
+    /**
+     * The method for editing access period of a student. 
+     * It asks for user input of the matric number of a student and the new access period. 
+     * If the matric number entered by the user is not valid, the function informs the user that student does not exist. 
+     */
     public void editAcessPeriod(){
         
         System.out.println ("---------------Editing access period---------------");
@@ -70,6 +103,12 @@ public class AdminBoundary {
         
     }
 
+    /**
+     * The method for adding a student.
+     * It asks for user input of the information required for a student. 
+     * Then, with the data provided, the function calls the addStudent method of the asc object. 
+     * Any exceptions will be printed. 
+     */
     public void addStudent(){
         try{
             System.out.println ("---------------Adding a new Student---------------");
@@ -100,6 +139,12 @@ public class AdminBoundary {
     }
 
 
+    /**
+     * The method for adding a course.
+     * It asks for user input of the information required for a course. 
+     * Then, with the data provided, the function calls the addCourse method of the acc object. 
+     * The method informs the user when an error occurs and asks the user to input a valid course type. 
+     */
     public void addCourse(){
         try{
             System.out.println ("---------------Adding a new Course---------------");
@@ -131,6 +176,15 @@ public class AdminBoundary {
         }
     }
 
+    /**
+     * The method for updating information of a course.
+     * <p>
+     * It asks the user to choose the fields to update by entering number(s). 
+     * Then, the method asks the user to enter information regarding the course to update and the new information. 
+     * <p>
+     * The method calls methods in the acc to modify information of the course. 
+     * The method informs the user when an error occurs and asks the user to input a valid course type. 
+     */
     public void updateCourse(){
         System.out.println ("---------------Updating Courses---------------");
         System.out.println("1. Update Course Name");
@@ -266,6 +320,11 @@ public class AdminBoundary {
     }
 
 
+    /**
+     * The method for checking vacancy in a course
+     * It asks the user to enter course code of the course to check on. 
+     * Then, the function calls the checkVacByAdmin method of the acc object. 
+     */
     public void checkVacancy(){
         System.out.println ("---------------Check available slots for an index number ---------------");
         System.out.print("Enter Course Code: ");
@@ -275,6 +334,11 @@ public class AdminBoundary {
         acc.checkVacByAdmin(code, index);
     }
 
+    /**
+     * The method for printing students by index number. 
+     * It asks the user to enter course code and index number they wish to print the student list for. 
+     * Then, the function calls the printStudentsByIndexNumber method of the acc object. 
+     */
     public void printByIndex(){
         System.out.println ("---------------Printing students by Index ---------------");
         System.out.print("Enter Course Code: ");
@@ -284,6 +348,11 @@ public class AdminBoundary {
         acc.printStudentsByIndexNumber(code, index);
     }
 
+    /**
+     * The method for printing students by course. 
+     * It asks the user to enter course code they wish to print the student list for. 
+     * Then, the function calls the printStudentsByCourse method of the acc object. 
+     */
     public void printByCourse(){
         System.out.println ("---------------Printing students by Course ---------------");
         System.out.print("Enter Course Code: ");
