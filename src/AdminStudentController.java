@@ -3,16 +3,43 @@ import java.time.*;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
+/**
+Controller class used by the admin users to modify students through the admin boundary class
+@author Group3_SS6_CZ2002
+@version 1.0
+@since 2020-11-22
+*/
 class AdminStudentController{
+    /**
+	 * The hashmap that contains the student id as the key and the student object as the value. 
+	 */
     private Map<String, Student> studentMap;
+    /**
+     * Constructor of the AdminStudentController class. 
+     * @param map The hashmap that contains the student id and objects. 
+     */
     public AdminStudentController(Map<String, Student> map) {
         this.studentMap = map;
     }
 
+    /**
+     * Checks whether a student exists with the matric number (id)
+     * @param matric A string that contains the student's matric number that is to be checked. 
+     */
     public boolean checkExistingStudent(String matric){
         return studentMap.containsKey(matric);
     }
 
+    /**
+     * Adds a student with his/her basic information. 
+     * <p>
+     * The function first checks if a student with that matric number exists. 
+     * @param name The name of the student.
+     * @param gender The gender of the student.
+     * @param nation The nationality of the student.
+     * @param matric The matric number of the student.
+     * @param emailId The Email id of the student.
+     */
     public void addStudent (String name, char gender, String nation, String matric, String emailId){
         if (studentMap.containsKey(matric)){
             System.out.println("Matric No: " + matric + " already exist.");
@@ -30,6 +57,15 @@ class AdminStudentController{
         }
     }
 
+    /**
+     * Modifies the access period of a student. 
+     * <p>
+     * it first checks if the student with the given matric number exists. 
+     * <p>
+     * After that, it checks whether the string format is valid. 
+     * @param matricNo The matric number of the student.
+     * @param newAccessPeriod The modified access period. it is given in a string of a specific format, which is "yyyy/MM/dd HH:mm-yyyy/MM/dd HH:mm"
+     */
     public void editAccessPeriod(String matricNo, String newAccessPeriod){
         try{
             if (studentMap.containsKey(matricNo)==false){
