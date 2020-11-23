@@ -16,8 +16,8 @@ Represents a timetable with courses registered by a student.
 */
 class Timetable implements Serializable{
     /**
-	 * The schedule of classes are stored within this hashmap. 
-	 */
+     * The schedule of classes are stored within this hashmap. 
+     */
     private Map<String, List<Timeslot>> schedule = new HashMap<>();
 
     /**
