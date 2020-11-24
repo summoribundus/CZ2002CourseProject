@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 
 /**
  * A controller class which operates necessary backend functions for student boundary
- * 
+ *
  *
  */
 public class StudentController {
@@ -13,7 +13,7 @@ public class StudentController {
      */
     private Map<String, Student> studentMap;
     private StudentCourseController scc;
-    
+
     /**
      * Create a studentcontroller constructor
      * @param studentMap
@@ -90,7 +90,7 @@ public class StudentController {
 
         }
     }
-    
+
     /**
      * A method to change index by calling course
      * @param matric
@@ -141,7 +141,7 @@ public class StudentController {
             catch(Exception e){
                 System.out.println(e.getMessage());
             }
-            
+
 
         }
     }

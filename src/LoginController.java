@@ -33,7 +33,7 @@ public class LoginController {
         Object tobeChecked = new Login(userName1, password, num);
         for (Object pass: loginList){
             Login p = (Login) pass;
-           if (p.equals(tobeChecked))
+            if (p.equals(tobeChecked))
                 return true;
         }
         return false;

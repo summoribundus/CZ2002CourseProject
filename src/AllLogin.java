@@ -11,38 +11,38 @@ import java.util.List;
  *
  */
 class AllLogin extends FileHandle{
-    /**
-     * Create private object
-     */
-    private List passwordList;
+	/**
+	 * Create private object
+	 */
+	private List passwordList;
 
-    /**
-     * Create constructor
-     */
-    public AllLogin(){
-    }
+	/**
+	 * Create constructor
+	 */
+	public AllLogin(){
+	}
 
-    /**
-     * A method to get list
-     * @return
-     */
-    public List getList(){
-        return passwordList;
-    }
+	/**
+	 * A method to get list
+	 * @return
+	 */
+	public List getList(){
+		return passwordList;
+	}
 
-    /**
-     * A method to set login list
-     * @param lst
-     */
-    public void setList(List<Login> lst){
-        this.passwordList = lst;
-    }
+	/**
+	 * A method to set login list
+	 * @param lst
+	 */
+	public void setList(List<Login> lst){
+		this.passwordList = lst;
+	}
 
-    /**
-     * A method to deserialize from password.dat file
-     */
-    public void deserializeFromFile(){
-        List oDetails = null;
+	/**
+	 * A method to deserialize from password.dat file
+	 */
+	public void deserializeFromFile(){
+		List oDetails = null;
 		FileInputStream fis = null;
 		ObjectInputStream in = null;
 		try {
@@ -56,25 +56,25 @@ class AllLogin extends FileHandle{
 			ex.printStackTrace();
 		}
 		this.passwordList = oDetails;
-		
-    }
 
-    /**
-     * A method to serialize from password.dat file
-     */
-    public void serializeToFile(){
-        FileOutputStream fos = null;
+	}
+
+	/**
+	 * A method to serialize from password.dat file
+	 */
+	public void serializeToFile(){
+		FileOutputStream fos = null;
 		ObjectOutputStream out = null;
 		try {
 			fos = new FileOutputStream("password.dat");
 			out = new ObjectOutputStream(fos);
 			out.writeObject(this.passwordList);
 			out.close();
-		//	System.out.println("Object Persisted");
+			//	System.out.println("Object Persisted");
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}
-    }
+	}
 
 	/**
 	 * Data for fast testing only

@@ -1,4 +1,4 @@
-
+//package sce.cz2002.yxy;
 
 import javax.management.ObjectName;
 import java.util.*;
@@ -10,6 +10,10 @@ import java.time.*;
  *
  */
 public class Student implements Serializable{
+
+    /**
+     *  Declare local variables
+     */
     private String Name;
     private String Username;
     private char Gender;
@@ -70,6 +74,10 @@ public class Student implements Serializable{
         return MatricNo;
     }
 
+    /**
+     * A method to get student password
+     * @return
+     */
     public String getStudentPassword() {
         return Password;
     }
@@ -185,9 +193,6 @@ public class Student implements Serializable{
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         System.out.println("Course code: "+courseCode);
         System.out.println("Index number: "+i);
-//        System.out.println("Index time table is as follows");
-//        System.out.println();
-//        i.printTimetable();
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
     }
 
