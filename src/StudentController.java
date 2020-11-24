@@ -19,8 +19,8 @@ public class StudentController {
 
     /**
      * Create a studentcontroller constructor
-     * @param studentMap
-     * @param scc
+     * @param studentMap map containing all students information
+     * @param scc student course controller object
      */
     public StudentController(Map<String, Student> studentMap, StudentCourseController scc){
         this.studentMap = studentMap;
@@ -29,9 +29,9 @@ public class StudentController {
 
     /**
      * A method to notify student for student swaping
-     * @param matric
-     * @param otp
-     * @return
+     * @param matric matic number
+     * @param otp one time password
+     * @return true if success
      */
     public boolean notifyStudent(String matric, String otp){
         if (studentMap.containsKey(matric)==false){
@@ -50,9 +50,9 @@ public class StudentController {
 
     /**
      * A method to add Course by calling course
-     * @param matric
-     * @param courseCode
-     * @param indexNumber
+     * @param matric matric number
+     * @param courseCode course code
+     * @param indexNumber index number
      */
     public void addCourse(String matric, String courseCode, int indexNumber){
         if (!studentMap.containsKey(matric)){
@@ -72,8 +72,8 @@ public class StudentController {
 
     /**
      * A method to drop Course by calling course
-     * @param matric
-     * @param courseCode
+     * @param matric matric number
+     * @param courseCode course code
      */
     public void dropCourse(String matric, String courseCode){
         if (studentMap.containsKey(matric)==false){
@@ -96,9 +96,9 @@ public class StudentController {
 
     /**
      * A method to change index by calling course
-     * @param matric
-     * @param courseCode
-     * @param newIndex
+     * @param matric matric number
+     * @param courseCode course code
+     * @param newIndex new index number
      */
     public void changeIndex(String matric, String courseCode, int newIndex){
         if (studentMap.containsKey(matric)==false){
@@ -121,9 +121,9 @@ public class StudentController {
 
     /**
      * A method to swap index with another student by calling course
-     * @param sMatric
-     * @param peerMatric
-     * @param courseCode
+     * @param sMatric student matric number
+     * @param peerMatric peer's matric number
+     * @param courseCode course code
      */
     public void swapIndexWithStudent(String sMatric, String peerMatric, String courseCode){
         if (studentMap.containsKey(sMatric)==false || studentMap.containsKey(peerMatric)== false){
@@ -151,8 +151,8 @@ public class StudentController {
 
     /**
      * A method to show course vancies by calling course
-     * @param courseCode
-     * @param index
+     * @param courseCode course code
+     * @param index index number
      */
     public void showVacancies(String courseCode, int index){
         scc.getVacancies(courseCode, index);
@@ -160,7 +160,7 @@ public class StudentController {
 
     /**
      * A method to print course registered 
-     * @param matric
+     * @param matric matric number
      */
     public void printCoursesRegistered(String matric){
         if (studentMap.containsKey(matric)==false){
@@ -178,8 +178,8 @@ public class StudentController {
 
     /**
      * A method to check Allowed period of student
-     * @param matricNo
-     * @return
+     * @param matricNo matric number
+     * @return true if allowed
      */
     public boolean checkAllowedPeriod(String matricNo) {
 

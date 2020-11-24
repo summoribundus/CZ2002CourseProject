@@ -14,7 +14,7 @@ public class LoginController {
 
     /**
      * Create constructor
-     * @param loginData
+     * @param loginData login data
      */
     public LoginController(List loginData){
         this.loginList = loginData;
@@ -24,10 +24,10 @@ public class LoginController {
 
     /**
      * A method to check the password with password.dat
-     * @param userName1
-     * @param password
-     * @param num
-     * @return
+     * @param userName1 username
+     * @param password password
+     * @param num domain
+     * @return true if success
      */
     public boolean checkPassword(String userName1 , String password,int num){
         Object tobeChecked = new Login(userName1, password, num);

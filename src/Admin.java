@@ -78,12 +78,14 @@ public class Admin implements Serializable {
     //---------------------------------getter methods--------------------------------------------------------------
     /**
      * Gets the username ID of the administrator
+     * @return username
      */
     public String getUsername(){
         return this.username_ID;
     }
     /**
-     * The password should not be revealed. An empty string is returned. 
+     * The password should not be revealed. An empty string is returned.
+     * @return password
      */
     public String getPassword(){
         //return this.password;
@@ -91,36 +93,42 @@ public class Admin implements Serializable {
     }
     /**
      * Gets the real name of the administrator
+     * @return name
      */
     public String getName(){
         return this.name;
     }
     /**
      * Gets the age of the administrator
+     * @return age
      */
     public int  getAge(){
         return this.age;
     }
     /**
      * Gets the Email ID of the administrator
+     * @return email
      */
     public String getEmaiId(){
         return this.emailID;
     }
     /**
      * Gets the nationality of the administrator
+     * @return nationality
      */
     public String getNationality(){
         return this.nationality;
     }
     /**
      * Gets the gender of the administrator
+     * @return gender
      */
     public String getGender(){
         return this.gender;
     }
     /**
      * Gets the contact details of the administrator
+     * @return contact
      */
     public String getContact(){
         return this.contact;

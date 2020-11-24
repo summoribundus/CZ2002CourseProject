@@ -64,11 +64,11 @@ public class Student implements Serializable{
 
     /**
      * Create Student constructors
-     * @param name
-     * @param gender
-     * @param nationality
-     * @param matric
-     * @param email
+     * @param name name
+     * @param gender gender
+     * @param nationality nationality
+     * @param matric matric number
+     * @param email email address
      */
     public Student(String name, char gender, String nationality, String matric, String email) {
         Name = name;
@@ -83,7 +83,7 @@ public class Student implements Serializable{
 
     /**
      * A method to get student name
-     * @return
+     * @return student name
      */
 
     public String getStudentName() {
@@ -92,7 +92,7 @@ public class Student implements Serializable{
 
     /**
      * A method to get user name
-     * @return
+     * @return user name
      */
     public String getStudentUsername() {
         return Username;
@@ -100,7 +100,7 @@ public class Student implements Serializable{
 
     /**
      * A method to get student matric
-     * @return
+     * @return matric number
      */
     public String getStudentMatric() {
         return MatricNo;
@@ -108,7 +108,7 @@ public class Student implements Serializable{
 
     /**
      * A method to get student password
-     * @return
+     * @return student password
      */
     public String getStudentPassword() {
         return Password;
@@ -116,7 +116,7 @@ public class Student implements Serializable{
 
     /**
      * A method to get course registered
-     * @return
+     * @return registered course
      */
     public Map<String, Integer> getCoursesRegistered() {
         return CoursesRegistered;
@@ -124,7 +124,7 @@ public class Student implements Serializable{
 
     /**
      * A method to get student email
-     * @return
+     * @return email address
      */
     public String getStudentEmail(){ return StudentEmail;}
 
@@ -138,7 +138,7 @@ public class Student implements Serializable{
 
     /**
      * A method to get course wait list
-     * @return
+     * @return course in wait list
      */
     public Map<String, Integer> getCoursesWaitlist() {
         return CoursesWaitlist;
@@ -146,7 +146,7 @@ public class Student implements Serializable{
 
     /**
      * A method to get AU
-     * @return
+     * @return au point
      */
     public int getAU(){
         return this.SumAU;
@@ -154,7 +154,7 @@ public class Student implements Serializable{
 
     /**
      * A method to set access period
-     * @param accessperiod
+     * @param accessperiod access period
      */
     public void setAccessPeriod(LocalDateTime[] accessperiod) {
         AccessPeriod = accessperiod;
@@ -162,7 +162,7 @@ public class Student implements Serializable{
 
     /**
      * A method to get access period
-     * @return
+     * @return access period of student
      */
     public LocalDateTime[] getAccessPeriod() {
         return AccessPeriod;
@@ -170,8 +170,8 @@ public class Student implements Serializable{
 
     /**
      * A method to add course registered
-     * @param i
-     * @param courseAU
+     * @param i index
+     * @param courseAU au of course
      */
     public void addtoCoursesRegistered(Index i, int courseAU){
         this.CoursesRegistered.put(i.getCourseCode(),i.getIndexNumber());
@@ -180,8 +180,8 @@ public class Student implements Serializable{
 
     /**
      * A method to add course wait list
-     * @param i
-     * @param courseAU
+     * @param i index
+     * @param courseAU au of course
      */
     public void addtoCoursesWaitlisted(Index i, int courseAU){
         this.CoursesWaitlist.put(i.getCourseCode(),i.getIndexNumber());
@@ -190,8 +190,8 @@ public class Student implements Serializable{
 
     /**
      * A method to delete from course registered
-     * @param i
-     * @param courseAU
+     * @param i index
+     * @param courseAU au of the course
      */
     public void delfromCoursesRegistered( Index i, int courseAU){
         this.CoursesRegistered.remove(i.getCourseCode());
@@ -200,8 +200,8 @@ public class Student implements Serializable{
 
     /**
      * A method to delete from course wait list
-     * @param i
-     * @param courseAU
+     * @param i index
+     * @param courseAU au of the course
      */
     public void delfromCoursesWaitlisted(Index i, int courseAU){
         this.CoursesWaitlist.remove(i.getCourseCode());
@@ -210,7 +210,7 @@ public class Student implements Serializable{
 
     /**
      * A method to get time table
-     * @return
+     * @return student's timetable
      */
     public Timetable getTimetable() {
         return this.timeSlot;
@@ -218,7 +218,7 @@ public class Student implements Serializable{
 
     /**
      * A method to print index timetable
-     * @param courseCode
+     * @param courseCode course code
      */
     public void printIndexTimeTable(String courseCode){
         Integer i = this.CoursesRegistered.get(courseCode);
@@ -230,8 +230,8 @@ public class Student implements Serializable{
 
     /**
      * A method to get index from course registered
-     * @param courseCode
-     * @return
+     * @param courseCode course code
+     * @return index number of the course registered
      */
     public int getIndexforCoursesRegistered(String courseCode){
         return this.CoursesRegistered.get(courseCode);
@@ -239,8 +239,8 @@ public class Student implements Serializable{
 
     /**
      * A method to get index from course wait list
-     * @param courseCode
-     * @return
+     * @param courseCode course code
+     * @return index number of the course in wait list
      */
     public int getIndexforCoursesWaitlisted(String courseCode){
         return this.CoursesWaitlist.get(courseCode);

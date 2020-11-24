@@ -67,7 +67,7 @@ public class AllStudent extends FileHandle{
 
     /**
      * A method to get student map
-     * @return
+     * @return map containing all students
      */
     public Map<String, Student> getStudentMap() {
         return studentMap;
@@ -75,16 +75,16 @@ public class AllStudent extends FileHandle{
 
     /**
      * A method to set student map
-     * @param studentMap
+     * @param studentMap map containing all students
      */
     public void setMap(Map<String, Student> studentMap) {
         this.studentMap = studentMap;
     }
 
     /**
-     * A method to check acess period
-     * @param s
-     * @return
+     * A method to check access period
+     * @param s string representing access period
+     * @return start and end access period
      */
     private LocalDateTime[] parseToAccessPeriod(String s) {
         try {
