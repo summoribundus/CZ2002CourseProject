@@ -57,7 +57,7 @@ public class Admin implements Serializable {
     /**
      * Another constructor of the Admin class
      * An admin object may be created with all the information of the new administrator
-     * @param adminID The ID of the new administrator is provided as a string.
+     * @param adminId The ID of the new administrator is provided as a string.
      * @param name The name of the new administrator is provided as a string.
      * @param age The age of the new administrator is provided as an integer. 
      * @param emailId The email ID of the new administrator is provided as a string.
@@ -136,7 +136,7 @@ public class Admin implements Serializable {
     }
     /**
      * Modify the Email id of the administrator
-     * @param contact the new Email id should be passed to the method in a string. 
+     * @param emailId the new Email id should be passed to the method in a string.
      */
     public void setEmailId(String emailId){
         this.emailID = emailId;
