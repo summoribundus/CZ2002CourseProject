@@ -17,7 +17,16 @@ import java.util.Map;
  *
  */
 public class AllStudent extends FileHandle{
+
+    /**
+     * Student Map
+     */
     private Map<String, Student> studentMap;
+
+    /**
+     * Declare AllStudent constructor
+     */
+
     public AllStudent(){}
 
     /**
