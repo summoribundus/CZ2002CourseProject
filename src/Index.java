@@ -241,7 +241,7 @@ public class Index implements Comparable<Index>, Serializable{
 
     /**
      * Set a new list of wait list students
-     * @param waitingListStudents
+     * @param waitingListStudents list of students waiting
      */
     public void setWaitingListStudents(LinkedList<Student> waitingListStudents) {
         this.waitingListStudents = waitingListStudents;
@@ -328,7 +328,7 @@ public class Index implements Comparable<Index>, Serializable{
 
     /**
      * Add students who recorded in wait list to wait list
-     * @param student
+     * @param student student
      */
     public void addStudentsToWaitList(Student student) {
         waitingListStudents.addLast(student);

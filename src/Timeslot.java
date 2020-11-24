@@ -51,37 +51,41 @@ public class Timeslot implements Serializable{
         this.venue = ven;
     }
     /**
-     * Get the opening date of the timeslot. 
+     * Get the opening date of the timeslot.
+     * @return opening date
      */
     public Date getOpening (){
         return this.opening;
     }
 
     /**
-     * Get the closing date of the timeslot. 
+     * Get the closing date of the timeslot.
+     * @return closing date
      */
     public Date getClosing(){
         return this.closing;
     }
 
     /**
-     * Get the venue of the timeslot. 
+     * Get the venue of the timeslot.
+     * @return venue
      */
     public String getVenue(){
         return this.venue;
     }
 
     /**
-     * Get the class type of the class occupying the classtype.  
+     * Get the class type of the class occupying the class type.
+     * @return class type
      */
     public String getClassType(){
         return this.classType;
     }
 
     /**
-     * Get the remarks of the timeslot. 
+     * Get the remarks of the timeslot.
+     * @return remarks (All/Odd/Even)
      */
-
     public timeType getRemarks(){
         return this.remarks;
     }
@@ -110,7 +114,8 @@ public class Timeslot implements Serializable{
 
     /**
      * Check if there is any clash between the current timeslot object and another Timeslot object. 
-     * @param t The other Timeslot object to be checked against. 
+     * @param t The other Timeslot object to be checked against.
+     * @return true if clash
      */
     public boolean checkClash(Timeslot t){
         if (this.remarks.compareTo(t.getRemarks())== 0 || this.remarks.compareTo(timeType.All)==0
@@ -128,7 +133,8 @@ public class Timeslot implements Serializable{
 
     /**
      * Check if the current timeslot object is identical to another Timeslot object. 
-     * @param t The other Timeslot object to be checked against. 
+     * @param t The other Timeslot object to be checked against.
+     * @return if equal
      */
     public boolean isEqual(Timeslot t){
         if (this.opening.compareTo(t.getOpening())==0 && this.closing.compareTo(t.getClosing())==0

@@ -19,8 +19,8 @@ public class Studentboundry {
 
     /**
      * Create StudentBoundary Constructor
-     * @param matricNo
-     * @param sc
+     * @param matricNo matric number
+     * @param sc student controller object
      */
     public Studentboundry(String matricNo, StudentController sc){
         this.matricNo = matricNo;
@@ -35,10 +35,8 @@ public class Studentboundry {
 
     /**
      * A method to show the menu options for student
-     * @param stud
+     * @param stud student
      */
-
-
     public void showMenu(String stud) {
         boolean flag = true;
         while (flag) {

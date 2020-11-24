@@ -449,8 +449,8 @@ public class Course implements Serializable{
 	/**
 	 * Add students in wait list to waiting list in index
 	 * (Initialization only)
-	 * @param student
-	 * @param numOfIndex
+	 * @param student student
+	 * @param numOfIndex index number
 	 */
 	public void addWaitListStudents(Student student, int numOfIndex) {
 		Index index = indexInfo.get(numOfIndex);
