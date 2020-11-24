@@ -3,13 +3,13 @@ import java.io.Serializable;
 import java.nio.charset.StandardCharsets;
 /**
  * A Login entity class
- * 
- *	
+ *
+ *
  */
 class Login implements Serializable{
     // association with username
     // encryption and checking takes place
-	
+
     /**
      * Decalre private objects
      */

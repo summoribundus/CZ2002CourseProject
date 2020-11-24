@@ -42,7 +42,7 @@ public class LoginBoundary {
             }
         }
 
-
+        // prints login interface
         System.out.println("Select your domain: ");
         System.out.println("1. Student");
         System.out.println("2. Admin");
@@ -61,18 +61,21 @@ public class LoginBoundary {
             }
             System.out.print("Network username or new username: ");
             String userName = scanner.next();
-            /* if you are using intellij for testing use this part below this*/
+            /* if you are using intellij or other IDE for testing use this part below this*/
 
             System.out.print("Password: ");
             String password = scanner.next();
 
-                /*Console part which masked the password, this module only runs with command prompt
+            /*Console part which masked the password, this module only runs with command prompt
 
-                Console console = System.console();
-                char[] passwordArray = console.readPassword("Enter the password: ");
-                String password = new String(passwordArray);*/
+            Console console = System.console();
+            char[] passwordArray = console.readPassword("Enter the password: ");
+            String password = new String(passwordArray);*/
+
             int num_ = Integer.parseInt(String.valueOf(num));
             boolean flag = loginController.checkPassword(userName, password, num_);
+
+            //Unsuccessful login
             if (flag == false){
                 System.out.println("Incorrect password/ username/ domain details.");
             }

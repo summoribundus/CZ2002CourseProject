@@ -20,21 +20,28 @@ public class AllStudent extends FileHandle{
     private Map<String, Student> studentMap;
     public AllStudent(){}
 
+    /**
+     * A method to serialize file
+     */
     public void serializeToFile() {
         try {
             if (studentMap != null) {
                 FileOutputStream fileOut =
-                    new FileOutputStream("Student.ser");
-            ObjectOutputStream out = new ObjectOutputStream(fileOut);
-            out.writeObject(studentMap);
-            out.close();
-            fileOut.close();
-            System.out.printf("Serialized data is saved in Student.ser\n");
+                        new FileOutputStream("Student.ser");
+                ObjectOutputStream out = new ObjectOutputStream(fileOut);
+                out.writeObject(studentMap);
+                out.close();
+                fileOut.close();
+                System.out.printf("Serialized data is saved in Student.ser\n");
             }
         } catch (IOException i) {
             i.printStackTrace();
         }
     }
+
+    /**
+     * A method to deserialize from file
+     */
     public void deserializeFromFile() {
         try {
             FileInputStream fileIn = new FileInputStream("Student.ser");
@@ -43,20 +50,33 @@ public class AllStudent extends FileHandle{
             in.close();
             fileIn.close();
         } catch (IOException e) {
-             studentMap = new HashMap<String, Student>();
+            studentMap = new HashMap<String, Student>();
         } catch (ClassNotFoundException i) {
             i.printStackTrace();
         }
     }
 
+    /**
+     * A method to get student map
+     * @return
+     */
     public Map<String, Student> getStudentMap() {
         return studentMap;
     }
 
+    /**
+     * A method to set student map
+     * @param studentMap
+     */
     public void setMap(Map<String, Student> studentMap) {
         this.studentMap = studentMap;
     }
 
+    /**
+     * A method to check acess period
+     * @param s
+     * @return
+     */
     private LocalDateTime[] parseToAccessPeriod(String s) {
         try {
             String arr[] = s.split("-");

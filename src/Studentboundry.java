@@ -4,19 +4,19 @@ import java.util.Scanner;
 
 /**
  * This is a class for student boundary which displays menu
- * 
+ *
  *
  */
 public class Studentboundry {
 
-    
+
     /**
      * Declare private objects
      */
     private String matricNo;
     private StudentController sc;
 
-    
+
     /**
      * Create StudentBoundary Constructor
      * @param matricNo
