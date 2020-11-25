@@ -9,10 +9,7 @@ import java.util.Map;
 /*We can add printTimeTable function as an extra feature */
 
 /**
-Represents a timetable with courses registered by a student. 
-@author Group3_SS6_CZ2002
-@version 1.0
-@since 2020-11-22
+Represents a timetable with courses registered by a student.
 */
 class Timetable implements Serializable{
     /**

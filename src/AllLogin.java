@@ -8,7 +8,6 @@ import java.util.Arrays;
 import java.util.List;
 /**
  * A login entity class
- *
  */
 class AllLogin extends FileHandle{
 	/**

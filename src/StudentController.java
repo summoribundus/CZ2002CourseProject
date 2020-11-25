@@ -4,8 +4,6 @@ import java.text.SimpleDateFormat;
 
 /**
  * A controller class which operates necessary backend functions for student boundary
- *
- *
  */
 public class StudentController {
     /**

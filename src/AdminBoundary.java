@@ -8,10 +8,7 @@ The interface (console) of administrators after login.
 <p>
 Admin users may choose actions to perform. 
 <p>
-This class calls methods in respective controller classes. 
-@author Group3_SS6_CZ2002
-@version 1.0
-@since 2020-11-22
+This class calls methods in respective controller classes.
 */
 public class AdminBoundary {
     /**

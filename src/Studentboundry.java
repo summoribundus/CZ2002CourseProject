@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 /**
  * This is a class for student boundary which displays menu
- *
- *
  */
 public class Studentboundry {
 

@@ -7,7 +7,6 @@ import java.time.*;
 
 /**
  * A entity class which declares student information
- *
  */
 public class Student implements Serializable{
 

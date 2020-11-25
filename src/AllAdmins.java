@@ -7,10 +7,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 /**
 Handles all the files and IO related to administrators. 
-It is a subclass of the Filehandle class.  
-@author Group3_SS6_CZ2002
-@version 1.0
-@since 2020-11-22
+It is a subclass of the Filehandle class.
 */
 class AllAdmins extends FileHandle{
     /**

@@ -1,8 +1,5 @@
 /**
  * Represents a course that opens to students
- * @author Ye Ziyuan
- * @version 1.0
- * @since 2020-11-22
  */
 
 import java.util.*;

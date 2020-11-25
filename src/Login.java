@@ -3,8 +3,6 @@ import java.io.Serializable;
 import java.nio.charset.StandardCharsets;
 /**
  * A Login entity class
- *
- *
  */
 class Login implements Serializable{
     // association with username
@@ -27,9 +25,9 @@ class Login implements Serializable{
 
     /**
      * Create Login constructor
-     * @param username
-     * @param raw
-     * @param domain
+     * @param username username
+     * @param raw raw password
+     * @param domain domain
      */
     public Login(String username, String raw, int domain){
         this.username = username;
@@ -40,7 +38,7 @@ class Login implements Serializable{
 
     /**
      * A method to set user name
-     * @param username
+     * @param username username
      */
     public void setUsername(String username){
         this.username = username;
@@ -48,7 +46,7 @@ class Login implements Serializable{
 
     /**
      * A method to set password
-     * @param password
+     * @param password password
      */
     public void setPassword(String password){
         this.hashed_pass = hash(password);
@@ -56,7 +54,7 @@ class Login implements Serializable{
 
     /**
      * A method to set domain
-     * @param domain
+     * @param domain domain
      */
     public void setDomain(int domain){
         this.domain = domain;
@@ -64,7 +62,7 @@ class Login implements Serializable{
 
     /**
      * A method to get domain
-     * @return
+     * @return domain
      */
     public int getDomain(){
         return this.domain;
@@ -72,7 +70,7 @@ class Login implements Serializable{
 
     /**
      * A method to get password
-     * @return
+     * @return password
      */
     public String getPassword(){
         return this.hashed_pass;
@@ -80,7 +78,7 @@ class Login implements Serializable{
 
     /**
      * A method to get user name
-     * @return
+     * @return username
      */
     public String getUsername(){
         return this.username;
@@ -88,8 +86,8 @@ class Login implements Serializable{
 
     /**
      * A method to hash the password
-     * @param raw
-     * @return
+     * @param raw raw password
+     * @return hashed password
      */
     private String hash(String raw){
         try{
@@ -105,8 +103,8 @@ class Login implements Serializable{
 
     /**
      * A method to convert byte to hex
-     * @param hash
-     * @return
+     * @param hash bytes
+     * @return hex string
      */
     private static String bytesToHex(byte[] hash) {
         StringBuilder hexString = new StringBuilder(2 * hash.length);
@@ -122,6 +120,7 @@ class Login implements Serializable{
     // can use it for polymorphism and LSP
     /**
      * A method to check credentials for login
+     * @param p1 another login object to be compared
      */
     @Override
     public boolean equals(Object p1){

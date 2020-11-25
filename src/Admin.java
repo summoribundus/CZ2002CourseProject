@@ -2,10 +2,7 @@
 import java.io.Serializable;
 /**
 Represents an administrator of the system.
-It stores the basic information of the administrator. 
-@author Group3_SS6_CZ2002
-@version 1.0
-@since 2020-11-22
+It stores the basic information of the administrator.
 */
 public class Admin implements Serializable {
     // idea can make student and admin inherit a class called account

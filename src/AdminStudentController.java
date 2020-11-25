@@ -5,9 +5,6 @@ import java.text.SimpleDateFormat;
 
 /**
 Controller class used by the admin users to modify students through the admin boundary class
-@author Group3_SS6_CZ2002
-@version 1.0
-@since 2020-11-22
 */
 class AdminStudentController{
     /**

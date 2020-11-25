@@ -7,10 +7,7 @@ import java.text.SimpleDateFormat;
 /**
 Represents a "slot" that a course may take up in the timetable. 
 <p>
-Contains necessary information regarding the classtype (lectures, tutorials, etc. ), opening and closing date, venue, and so on. 
-@author Group3_SS6_CZ2002
-@version 1.0
-@since 2020-11-22
+Contains necessary information regarding the classtype (lectures, tutorials, etc. ), opening and closing date, venue, and so on.
 */
 public class Timeslot implements Serializable{
     /**

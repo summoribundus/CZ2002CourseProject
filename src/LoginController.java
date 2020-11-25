@@ -3,7 +3,6 @@ import java.util.List;
 
 /**
  * A controller class which handles login
- *
  */
 public class LoginController {
 

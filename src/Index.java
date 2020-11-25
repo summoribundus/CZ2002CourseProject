@@ -1,8 +1,5 @@
 /**
  * Represent indices within course.
- * @author Li Rui
- * @version 1.0
- * @since 2020-11-22
  */
 
 import java.util.ArrayList;

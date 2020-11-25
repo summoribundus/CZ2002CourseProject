@@ -14,7 +14,6 @@ import java.util.Map;
 
 /**
  * A entity class for student
- *
  */
 public class AllStudent extends FileHandle{
     private Map<String, Student> studentMap;
