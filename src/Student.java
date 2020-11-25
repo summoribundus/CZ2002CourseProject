@@ -11,20 +11,52 @@ import java.time.*;
 public class Student implements Serializable{
 
     /**
-     *  Declare local variables
+     *  Declare local variables Name
      */
     private String Name;
+    /**
+     *  Declare local variables Username
+     */
     private String Username;
+    /**
+     *  Declare local variables Gender
+     */
     private char Gender;
+    /**
+     *  Declare local variables Nationality
+     */
     private String Nationality;
+    /**
+     *  Declare local variables MatricNo
+     */
     private String MatricNo;
+    /**
+     *  Declare local variables password
+     */
     private String Password;
+    /**
+     *  Declare local variables StudentEmail
+     */
     private String StudentEmail;
+    /**
+     *  Declare local variables CourseRegistered
+     */
     private Map<String, Integer> CoursesRegistered;
+    /**
+     *  Declare local variables CoursesWaitlist
+     */
     private Map<String, Integer> CoursesWaitlist;
-    //private Map<>
+    /**
+     *  Declare local variables sumAU
+     */
     private int SumAU = 0;
+    /**
+     *  Declare local variables AccessPeriod
+     */
     private LocalDateTime[] AccessPeriod;
+    /**
+     *  Declare local variables Timetable
+     */
     private Timetable timeSlot;
 
 

@@ -16,7 +16,16 @@ import java.util.Map;
  * A entity class for student
  */
 public class AllStudent extends FileHandle{
+
+    /**
+     * Student Map
+     */
     private Map<String, Student> studentMap;
+
+    /**
+     * Declare AllStudent constructor
+     */
+
     public AllStudent(){}
 
     /**

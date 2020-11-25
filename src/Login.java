@@ -9,12 +9,19 @@ class Login implements Serializable{
     // encryption and checking takes place
 
     /**
-     * Decalre private objects
+     * Declare private object hashed password
      */
     private String hashed_pass;
     // primary key
+    /**
+     * Declare private object username
+     */
     private String username;
-    // domain = 1 for student and domain = 2 for admin
+
+
+    /**
+     * Declare private object domain which domain = 1 for student and domain = 2 for admin
+     */
     private int domain;
 
     /**

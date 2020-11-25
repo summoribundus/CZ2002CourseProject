@@ -7,9 +7,12 @@ import java.text.SimpleDateFormat;
  */
 public class StudentController {
     /**
-     * Declare private objects
+     * Declare private variable studentMap
      */
     private Map<String, Student> studentMap;
+    /**
+     * Declare local variable scc for StudentCourseController
+     */
     private StudentCourseController scc;
 
     /**

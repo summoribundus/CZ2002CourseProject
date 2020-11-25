@@ -311,6 +311,7 @@ public class AdminBoundary {
                         System.out.println("Enter valid course code that exists");
                         flag = true;
                     }
+		break;
                 default: System.out.println("Re-enter the choice..................In valid choice!");
             }
         }

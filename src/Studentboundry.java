@@ -9,9 +9,12 @@ public class Studentboundry {
 
 
     /**
-     * Declare private objects
+     * Declare local variable matricNo
      */
     private String matricNo;
+    /**
+     * Declare local variable sc for StudentController
+     */
     private StudentController sc;
 
 
